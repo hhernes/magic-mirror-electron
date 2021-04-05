@@ -1,4 +1,4 @@
 # magic-mirror-electron
 
-npm install
+npm install. 
 npm start
