@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MM</title>
+    <meta name="author" content="Haakon Hernes">
+    <meta name="description" content="Web page for displaying departure times for
+    public transport, available city bikes and weather forecast">
+    <meta name="contact" content="github.com/hhernes">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" rel="stylesheet">
+    <script src="dayjs.min.js"> </script>
+    <script src="plugins/localizedFormat.js"> </script>
+    <script src="plugins/updateLocale.js"> </script>
+    <script src="plugins/relativeTime.js"> </script>
+    <script src="plugins/utc.js"> </script>
+  </head>
+  <body>
+      <div class="modules" id="timeModule"></div>
+      <div class="modules" id="weather"></div>
+      <div class="modules" id="citybike"></div>
+      <div class="modules" id="entur"></div>
+      <div id="inputs">
+        <h1 id="setup">Setup</h1>
+        <label for="coordinates">Enter location coordinates:<br/>(latitude and longitude separated by ",")</label>
+        <input type="text" id="coordinates" placeholder="e.g 59.9171,10.7274">
+        <div class="infoText" id="coordinatesText"></div>
+        <label for="nsrIds">Enter NSR id: <a id="infoSign" href="https://developer.entur.org/pages-nsr-nsr" target="_blank">&#9432;</a></label>
+        <input id="nsrIds" placeholder="e.g 59894">
+        <div class="infoText" id="nsrText"></div>
+        <label for="stationsIds">Enter Oslo City Bike station name(s):<br/>(Multiple stations should be separated by ",")</label>
+        <input id="stationIds" placeholder="e.g Tjuvholmen,Aker Brygge,Dokkveien">
+        <div class="infoText" id="stationsText"></div>
+        <button id="submitButton">Submit</button>
+      </div>
+      <script type="text/javascript" src="script.js"> </script>
+  </body>
+</html>
