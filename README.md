@@ -1,5 +1,5 @@
 # magic-mirror-electron
 
-Clone the repository
+Clone the repository  
 npm install  
 npm start
